@@ -123,7 +123,7 @@ const isActivePrayer = (prayerName: string) => {
     }
 
     // If all prayers for today have passed, return tomorrow's Subuh
-    return { name: "Subuh (tomorrow)", time: prayerTimes.jadwal.subuh }
+    return { name: "Subuh (besok)", time: prayerTimes.jadwal.subuh }
   }
 
   const nextPrayer = getNextPrayer()
@@ -156,7 +156,7 @@ const isActivePrayer = (prayerName: string) => {
             <div className="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900 rounded-lg flex items-center">
               <Clock className="h-5 w-5 text-emerald-600 dark:text-emerald-400 mr-2" />
               <span className="text-emerald-800 dark:text-emerald-200">
-                Next prayer: <strong>{nextPrayer.name}</strong> at <strong>{nextPrayer.time}</strong>
+                Waktu shalat selanjutnya: <strong>{nextPrayer.name}</strong> pada <strong>{nextPrayer.time}</strong>
               </span>
             </div>
           )}
