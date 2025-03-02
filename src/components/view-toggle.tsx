@@ -33,11 +33,11 @@ export function ViewToggle() {
       <ToggleGroup type="single" value={view} onValueChange={handleViewChange}>
         <ToggleGroupItem value="daily" aria-label="Daily view" className="px-2">
           <CalendarIcon className="h-4 w-4" />
-          Daily
+          Harian
         </ToggleGroupItem>
         <ToggleGroupItem value="monthly" aria-label="Monthly view" className="px-4">
           <CalendarDays className="h-4 w-4" />
-          Monthly
+          Bulanan
         </ToggleGroupItem>
       </ToggleGroup>
     </div>
