@@ -1,3 +1,4 @@
+import { SearchParamsSuspenseWrapper } from "@/components/suspense-wrappers"
 import { PrayerTimesDisplay } from "@/components/prayer-times-display"
 import { CitySelector } from "@/components/city-selector"
 import { DateSelector } from "@/components/date-selector"
@@ -18,13 +19,16 @@ export default function Home() {
               <ViewToggle />
             </div>
             <div className="md:flex-1">
+            <SearchParamsSuspenseWrapper>
               <CitySelector />
+              </SearchParamsSuspenseWrapper>
             </div>
             <div className="md:flex-1">
+            <SearchParamsSuspenseWrapper>
               <DateSelector />
+              </SearchParamsSuspenseWrapper>
             </div>
           </div>
-
 
           <PrayerTimesDisplay />
         </div>
