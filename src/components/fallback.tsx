@@ -1,8 +1,4 @@
-export const CitySelectorSkeleton = () => (
-    <div className="w-full h-10 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></div>
-  );
-  
-export const DateSelectorSkeleton = () => (
+export const BasicSkeleton = () => (
     <div className="w-full h-10 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></div>
   );
   

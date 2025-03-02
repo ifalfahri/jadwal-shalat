@@ -1,8 +1,11 @@
 import { CitySelector } from "@/components/city-selector";
 import { DateSelector } from "@/components/date-selector";
+import {
+  BasicSkeleton,
+  PrayerTimesDisplaySkeleton,
+} from "@/components/fallback";
 import { PrayerTimesDisplay } from "@/components/prayer-times-display";
 import { ViewToggle } from "@/components/view-toggle";
-import { CitySelectorSkeleton, DateSelectorSkeleton, PrayerTimesDisplaySkeleton } from "@/components/fallback";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -17,15 +20,17 @@ export default function Home() {
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 flex-wrap mb-6">
             <div className="md:w-auto">
-              <ViewToggle />
+              <Suspense fallback={<BasicSkeleton />}>
+                <ViewToggle />
+              </Suspense>
             </div>
             <div className="md:flex-1">
-              <Suspense fallback={<CitySelectorSkeleton />}>
+              <Suspense fallback={<BasicSkeleton />}>
                 <CitySelector />
               </Suspense>
             </div>
             <div className="md:flex-1">
-              <Suspense fallback={<DateSelectorSkeleton />}>
+              <Suspense fallback={<BasicSkeleton />}>
                 <DateSelector />
               </Suspense>
             </div>
