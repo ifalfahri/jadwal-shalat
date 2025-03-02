@@ -12,7 +12,7 @@ import type { PrayerTime, MonthlyPrayerTimes } from "@/lib/types"
 
 export function PrayerTimesDisplay() {
   const searchParams = useSearchParams()
-  const cityId = searchParams.get("cityId") || "1632" // Default to Kota Kediri
+  const cityId = searchParams.get("cityId") || "1301" // Default to Jakarta
   const dateParam = searchParams.get("date") || format(new Date(), "yyyy-MM-dd")
   const view = searchParams.get("view") || "daily"
 
