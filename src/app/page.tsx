@@ -1,9 +1,10 @@
 import { CitySelector } from "@/components/city-selector";
 import { DateSelector } from "@/components/date-selector";
 import { PrayerTimesDisplay } from "@/components/prayer-times-display";
-import { SearchParamsSuspenseWrapper } from "@/components/suspense-wrappers";
 import { ViewToggle } from "@/components/view-toggle";
+import { CitySelectorSkeleton, DateSelectorSkeleton, PrayerTimesDisplaySkeleton } from "@/components/fallback";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -19,19 +20,19 @@ export default function Home() {
               <ViewToggle />
             </div>
             <div className="md:flex-1">
-              <SearchParamsSuspenseWrapper>
+              <Suspense fallback={<CitySelectorSkeleton />}>
                 <CitySelector />
-              </SearchParamsSuspenseWrapper>
+              </Suspense>
             </div>
             <div className="md:flex-1">
-              <SearchParamsSuspenseWrapper>
+              <Suspense fallback={<DateSelectorSkeleton />}>
                 <DateSelector />
-              </SearchParamsSuspenseWrapper>
+              </Suspense>
             </div>
           </div>
-          <SearchParamsSuspenseWrapper>
+          <Suspense fallback={<PrayerTimesDisplaySkeleton />}>
             <PrayerTimesDisplay />
-          </SearchParamsSuspenseWrapper>
+          </Suspense>
         </div>
 
         <footer className="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
