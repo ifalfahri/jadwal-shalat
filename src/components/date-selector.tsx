@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { format } from "date-fns"
+import { id } from "date-fns/locale"
 import { CalendarIcon } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { cn } from "@/lib/utils"
@@ -42,11 +43,11 @@ export function DateSelector() {
           className={cn("w-full justify-start text-left font-normal", !date && "text-muted-foreground")}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? format(date, "EEEE, dd MMMM yyyy") : <span>Pick a date</span>}
+          {date ? format(date, "EEEE, dd MMMM yyyy", { locale: id }) : <span>Pilih tanggal</span>}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">
-        <Calendar mode="single" selected={date} onSelect={handleDateSelect} initialFocus />
+        <Calendar mode="single" selected={date} onSelect={handleDateSelect} initialFocus locale={id} />
       </PopoverContent>
     </Popover>
   )
