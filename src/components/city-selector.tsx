@@ -66,24 +66,24 @@ export function CitySelector({ defaultCity }: CitySelectorProps) {
       <PopoverTrigger asChild>
         <Button variant="outline" role="combobox" aria-expanded={open} className="w-full justify-between">
           {loading ? (
-            "Loading cities..."
+            "Memuat..."
           ) : selectedCity ? (
             selectedCity.name
           ) : (
-            "Select city..."
+            "Pilih Kota atau Kabupaten..."
           )}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-full p-0">
         <Command>
-          <CommandInput placeholder="Search city..." />
+          <CommandInput placeholder="Cari Kota atau Kabupaten..." />
           <CommandList>
             {loading ? (
-              <CommandItem disabled>Loading cities...</CommandItem>
+              <CommandItem disabled>Loading...</CommandItem>
             ) : (
               <>
-                <CommandEmpty>No city found.</CommandEmpty>
+                <CommandEmpty>Wilayah tidak ditemukan.</CommandEmpty>
                 <CommandGroup className="max-h-[300px] overflow-y-auto">
                   {cities.map((city) => (
                     <CommandItem
