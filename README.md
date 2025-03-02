@@ -1,7 +1,6 @@
 # 🕌 Jadwal Shalat
 
-
-![Jadwal Shalat App Screenshot](./assets/screenshot.png)
+![Jadwal Shalat App Screenshot](https://res.cloudinary.com/dyjxcujz4/image/upload/v1740925737/Screenshot_2025-03-02_222814_onsxv6.png)
 
 ## ✨ Features
 
