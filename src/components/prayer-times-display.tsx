@@ -295,7 +295,7 @@ const isActivePrayer = (prayerName: string) => {
 
   return (
     <div className="mt-6 p-4 bg-red-50 dark:bg-red-900/30 rounded-lg text-red-600 dark:text-red-300">
-      Failed to load prayer times. Please try again.
+      Gagal mendapatkan data jadwal shalat. Silakan coba lagi.
     </div>
   )
 }
